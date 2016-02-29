@@ -1,5 +1,8 @@
-# presentation-continuous-database
+# presentation-convergence
+Presentation de la convergence des outils et méthodes entre devs et ops
 
-Slideshow dedicated to present a continuous approach for database design process.
+# Compilation de la présentation
 
-This slideshow is for now in his very early stage, in Draft Mode.
+La présentation est entièrement écrite en markdown, la présentation compilée via [cleaver](https://github.com/jdan/cleaver).
+
+Elle est consultable à l'adresse http://dsi-ville-noumea.github.io/presentation-convergence.
