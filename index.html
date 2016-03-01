@@ -1,6 +1,7 @@
 <html>
     <head>
         <link rel="stylesheet" href="css/reveal.css">
+        
         <link rel="stylesheet" href="css/theme/moon.css" id="theme">
 
         <!-- If the query includes 'print-pdf', include the PDF print sheet -->
@@ -21,20 +22,92 @@
             <div class="slides">
 
                 <section>
-                    <h1>About My Product</h1>
-                    <p>My product discussed here</p>		
+                    <h1>Database without dba</h1>
+                    <p>An Agile Database development/deployment approach.</p>
+                    <p><a href="https://github.com/DSI-Ville-Noumea">Ville de Noumea</a></p>
+                </section>
+                
+                <section>
+                    <h2>The sentences that triggered everything</h2>
+                    <p>
+                    <ul>
+                        <li>We cannot guarantee you that we'll pass the right sql script on the right database nor on the right environment</li>
+                        <li>We are not comfortable with database schema upgrades</li>
+                        <li>We don't have time to read the sqls you provide : we do pass them as provided without checking design issues</li>
+                        <li>We'd like to only run (simple) system command lines and not having to deal with databases (even db client tools)</li>
+                    </ul>
+                    </p>
+                </section>
+                
+                <section>
+                    <h2>...still remembering that day.</h2>
+                    <p>
+                        <img src="http://i.giphy.com/26tP0ajQqkYICLDsQ.gif"/>
+                    </p>
+                </section>
+                
+                <section>
+                    <h2>Agility, flexibiliy</h2>
+                    <p>
+                    <ul>
+                        <li>from weakness to opportunities</li>
+                        <li>automate everything</li>
+                        <li>version/tag anything</li>
+                        <li>threat database like any other system component</li>
+                        <li>push dev code to prod without having to give them access to prod/test databases</li>
+                    </ul>
+                    </p>
+                </section>
+                
+                <section>
+                    <h2>Motivations</h2>
+                    <p>
+                    <ul>
+                        <li>No production DBA</li>
+                        <li>Architect/developer who was previously Oracle/PgSql production DBA</li>
+                        <li>Sysadmin focused on automation</li>
+                        <li>Focus on automation for all</li>
+                        <li>Motivation to deploy faster/more with no specific database knowledge</li>
+                        <li>Wish to version everything</li>
+                        <li>No resource/time to test database design quality in the production team</li>
+                        <li>All Linux users and commited in open source development and tools</li>
+                    </ul>
+                    </p>
+                </section>
+                
+                <section>
+                    <h2>Team</h2>
+                    <p>
+                    <ul>
+                        <li><a href="https://www.linkedin.com/in/david-majorel-a0a58736">David Majorel</a> (sysadmin)</li>
+                        <li><a href="https://www.linkedin.com/in/adrien-sales-898b7270">Adrien Sales</a> (architect/dev/dba knowledge)</li>
+                        <li><a href="https://www.linkedin.com/in/mich%C3%A8le-barr%C3%A9-2652b06"> Michele Barre</a> (java/j2ee developer)</li>
+                        <li><a href="https://www.linkedin.com/in/melaniegault">Melanie Gault</a> (sysadmin/architect/puppetizer)</li>
+                    </ul>
+                    </p>
+                </section>
+                
+                <section>
+                    <h2>Roadmap</h2>
+                    <p>
+                    <ol>
+                        <li>Deploy & upgrade databases schemas easier</li>
+                        <li>Document database schema in an automated way</li>
+                        <li>Check and report database design issues</li>
+                    </ol>
+                    </p>
+                </section>
+                
+                <section>
+                    <h2>Tools</h2>
+                    <ul>
+                        <li><a href="http://www.liquibase.org/">Liquibase</a> : "source control for your database"</li>
+                        <li><a href="http://sualeh.github.io/SchemaCrawler/">Schemacrawler</a> : schema discovery and comprehension tool</li>
+                    </ul>
                 </section>
 
-
-                <section data-markdown>
-                    <script type="text/template">
-                        - Item 1 <!-- .element: class="fragment" data-fragment-index="2" -->
-                        - Item 2 <!-- .element: class="fragment" data-fragment-index="1" -->
-                    </script>
-                </section>
-
-                <section>Slide 1</section>
-                <section>Slide 2</section>
+                <!-- ---------------------------------------          -->
+                
 
                 <section data-background="#ff0000">
                     <h2>All CSS color formats are supported, like rgba() or hsl().</h2>
