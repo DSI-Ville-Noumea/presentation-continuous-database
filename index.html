@@ -135,7 +135,7 @@
                     <h2>Security</h2>
                     <ul>
                         <li>We don't want apps (war) to upgrade database themselves</li>
-                        <li>Apps are connecting to db with dedicated accounts that can only execute DML : datasrouce cannot add column/drop table</li>
+                        <li>Apps are connecting to db with dedicated accounts that can only execute DML : datasource cannot add column/drop table</li>
                         <li>Table privileges are fine grained</li>
                         <li>Apps connect to db through a dedicated user : privileges are granted to him, table names are resolved by synonyms/search_path</li>
                         <li>DDL queries are only run by liquibase commands (adm_users)</li>
