@@ -148,7 +148,7 @@
                     <h3>From ...</h3>
                     <ol>
                         <li>Get the sql</li>
-                        <li>Get the open the dedicated db client</li>
+                        <li>Get, install (and maintain) the open the dedicated db client</li>
                         <li>Connect to the right db on the right env</li>
                         <li>Check that you don't have already played this sql</li>
                         <li>Run the sql</li>
@@ -164,9 +164,23 @@
                         <li>Something's wrong on the prod db vs dev one : are you sure you ran the same sqls on both ? If not, what is the delta ?</li>
                     </ol>
                 </section>
+                <section data-background="black">
+                    <h2>to.</h2>
+                    <h3>Puppetized Liquibase install</h3>
+                    <pre><code>
+class profiles::liquibase {
+  $version      = hiera('liquibase::version')
+  class { 'liquibase':
+  version      => $version,
+  }
+}
+                    </code></pre>
+                </section>
+                
                 
                 <section data-background="black">
                     <h2>to.</h2>
+                    <h3>Schema upgrade</h3>
                     <pre><code>
 export TARGET_VERSION=1.04.00
 cd liquibase
