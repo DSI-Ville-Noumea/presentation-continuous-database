@@ -25,7 +25,7 @@
                 <section>
                     <h1>Database without dba</h1>
                     <h2>An Agile Database approach for (very) little teams.</h2>
-                    <p><a href="https://github.com/DSI-Ville-Noumea">Ville de Noumea</a></p>
+                    <p><a href="https://github.com/DSI-Ville-Noumea">Adrien Sales/Ville de Noumea</a></p>
                 </section>
 
                 <section>
@@ -126,7 +126,7 @@
                 <section>
                     <h2>Tools</h2>
                     <ul>
-                        <li><a href="http://www.liquibase.org/">Liquibase</a> : "source control for your database"</li>
+                        <li><a href="http://www.liquibase.org/">Liquibase</a> : <i>"source control for your database"</i></li>
                         <li><a href="http://sualeh.github.io/SchemaCrawler/">Schemacrawler</a> : schema discovery and comprehension tool</li>
                     </ul>
                 </section>
@@ -186,7 +186,7 @@ export TARGET_VERSION=1.04.00
 cd liquibase
 # Switch to tag
 git checkout tags/${TARGET_VERSION}
-# report pending upgrades (dba review possible)
+# report pending upgrades (dba not done, but review possible)
 liquibase dbDoc ./dbDoc
 # perform upgrade
 liquibase update
@@ -243,6 +243,16 @@ liquibase update
                         <li>Automatically generate SQL scripts for DBA code review</li>
                         <li>Open Source: Apache 2.0 License : code donation, public roadmap</li>
                         <li>Java APIs for executing and embedding</li>
+                        <li>Generate database Changelog</li>
+                        <li>Extensions : db2i for AS400->PgSql Migrations</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Liquibase</h2>
+                    <h3>Not (yet) used features</h3>
+                    <ul>
+                        <li>Tags</li>
+                        <li>Contexts</li>
                     </ul>
                 </section>
                 
@@ -260,16 +270,44 @@ liquibase update
 
                 
                 <section>
-                    <h2>The "liquibase dilemna"</h2>
+                    <h2>The "liquibase dilemma"</h2>
                     <p>Should i recreate a non "liquified" database to get
                         the whole db changelog or should i construct liquibase
                         on legacy created tables ?</p>
                 </section>
 
+                <section>
+                    <h2>Liquibase Code donations</h2>
+                    <ul>
+                        <li>rpm and rpm installers, merged in base source code, now part of official release</li>
+                        <li>Puppet module</li>
+                        <li>Some bug fixes (with related unit tests)</li>    
+                    </ul>
+                </section>
 
-
+                <section>
+                    <h2>Links and resources</h2>
+                    <ul>
+                        <li><a href="http://fr.slideshare.net/MlanieGault/201406automatisation-de-la-productionsieinfra">Production automation</a></li>
+                    </ul>
+                </section>
+                
+                <!-- The schemacrawler part -->
+                <section>
+                    <h2>Now you have a database ...</h2>
+                    <h3>How to better understand, check and test its design quality ...</h3>
+                    <ul>
+                        <li>Better inderstant database design/relations</li>
+                        <li>Draw database diagram</li>
+                        <li>Check and test design quality</li>
+                        
+                    </ul>
+                </section>
+                
                 <!-- ---------------------------------------          -->
-
+                <section data-background="#ff0000">
+                    <h2>All CSS color formats are supported, like rgba() or hsl().</h2>
+                </section>
 
                 <section data-background="#ff0000">
                     <h2>All CSS color formats are supported, like rgba() or hsl().</h2>
