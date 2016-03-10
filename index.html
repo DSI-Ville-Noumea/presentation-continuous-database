@@ -21,14 +21,14 @@
     <body>
         <div class="reveal">
             <div class="slides">
-                
+
 
                 <section data-background="black">
                     <h1>Database without dba</h1>
                     <h2>An Agile/DevOps Database approach for (very) little teams.</h2>
                     <p><a href="https://github.com/DSI-Ville-Noumea">Adrien Sales/Ville de Noumea</a></p>
                 </section>
-                
+
                 <section>
                     <h1>DevOps</h1>
                     <h2>Goals</h2>
@@ -38,7 +38,7 @@
                         <li>Increase release velocities : faster and more often</li>
                     </ul>
                 </section>
-                
+
                 <section>
                     <h1>What is DevOps</h1>
                     <h2>in a few words</h2>
@@ -48,7 +48,7 @@
                         <li><i>Not a prescribed set of practices, but rather high depending on teams, technologies and processes which make up organization</i></li>
                     </ul>
                 </section>
-                
+
                 <section>
                     <h1>Communication</h1>
                     <h2>The core</h2>
@@ -58,7 +58,7 @@
                         <li>Dev understanding how underlying systems are configured/working : knowledge of impact of changes between dev and prod</li>
                     </ul>
                 </section>
-                
+
                 <section>
                     <h1>Communication</h1>
                     <ul>
@@ -67,7 +67,7 @@
                         <li>Egocentric vs. holistic view of the system and collaboration to optimize the value stream</li>
                     </ul>
                 </section>
-                
+
                 <section>
                     <h1>Shifting Left</h1>
                     <h2></h2>
@@ -78,7 +78,7 @@
                         <li>Reduce time and resource spent in troubleshooting</li>
                     </ul>
                 </section>
-                
+
                 <section data-background="black">
                     <h2>Cost of a Bugfix</h2>
                     <img src="img/relative-cost-of-a-bugfix.png" alt="Relative Cost Of a Bugfix"/>
@@ -88,13 +88,13 @@
                     <blockquote>Not automating every process, but rather only those tasks that are manual,
                             rote, tedious aspects of the job and consume a great deal of your time.</blockquote>
                 </section>
-                
+
                 <section data-background="black">
                     <blockquote>Free up time for IT pros. to think about more strategic issues, and spend more
                             time collaborating with other groups to driver additional value through innovation
                             in their products and services.</blockquote>
                 </section>
-                
+
 
                 <section>
                     <h2>Benefits</h2>
@@ -107,17 +107,17 @@
                         <li>More frequent release of innovative features</li>
                     </ul>
                 </section>
-                
+
                 <section data-background="black">
                     <h2>DBA and and DevOps</h2>
                     <img src="img/dba-roles.png" alt="DBA roles"/>
                 </section>
-                
+
                 <section data-background="black">
                     <blockquote>Great, but ... what can we do NOW to save resources and focus on the real deal ?</blockquote>
                     <img src="http://i.giphy.com/3ornkczqjMrIUmdmSs.gif" alt="And now ?"/>
                 </section>
-                
+
                 <section data-background="black">
                     <h2>Human values</h2>
                     <ul>
@@ -126,14 +126,14 @@
                         <li>Never stop to improve yourself as well as the system</li>
                     </ul>
                 </section>
-                
+
                 <section data-background="black">
                     <h2>shintoism</h2>
                     <blockquote>The followers of Shintoism believe that spiritual powers exist in the
                         natural world. They believe that "spirits" called kami live in natural places
                         such as in animals, plants, stones, mountains, rivers, people and even the dead. </blockquote>
                 </section>
-                
+
                 <section data-background="black">
                     <h2>IT shintoism</h2>
                     <h3>Loving softwares and your system</h3>
@@ -144,26 +144,26 @@
                     </ul>
                     <img src="http://i.giphy.com/UMLfKCWTGwVoc.gif" alt="IT Shinto"/>
                 </section>
-               
-                
-                
-                
+
+
+
+
                 <!-- real life -->
                 <section data-background="black">
                     <h2>Now, let's deal with real life.</h2>
                     <h3>The sentences that triggered everything</h3>
                 </section>
-                
+
                 <section data-background="black">
                     <blockquote>We are not comfortable with database schema upgrades.</blockquote>
                 </section>
-                
+
                 <section data-background="black">
                     <blockquote>We don't have time to read the sqls you provide : we
                             do pass them as provided without checking potential design
                             issues and we don't necessary have the required knowledge.</blockquote>
                 </section>
-                
+
 
                 <section data-background="black">
                     <h2>Still remembering that day...</h2>
@@ -218,9 +218,9 @@
                         <li><a href="https://www.linkedin.com/in/sualeh">Sualeh Fatehi</a>/<a href="http://sualeh.github.io/SchemaCrawler/">Schemacrawler</a> (schemacrawler lead developer)</li>
                     </ul>
                 </section>
-                
-                
-                
+
+
+
                 <section>
                     <h2>Roadmap</h2>
                     <h3>Achieved today</h3>
@@ -239,14 +239,14 @@
                         <li><a href="http://sualeh.github.io/SchemaCrawler/">Schemacrawler</a> : <i>"schema discovery and comprehension tool"</i></li>
                     </ul>
                 </section>
-                
+
                 <section>
                     <h2>Tools</h2>
                     <h3>Liquibase</h3>
                     <img src="http://www.liquibase.org/custom_images/home_tagline.png" alt="Liquibase logo"/>
                 </section>
-                
-                
+
+
                 <section>
                     <h2>Key concepts</h2>
                     <ul>
@@ -254,9 +254,9 @@
                         <li>Everything you need to know about the <i>why</i> of a database change is tied to the change itself</li>
                         <li>It is easy and possible for DBAs to review changes before deployment</li>
                     </ul>
-                    
+
                 </section>
-                
+
                 <section>
                     <h2>Security</h2>
                     <ul>
@@ -302,8 +302,8 @@ class profiles::liquibase {
 }
                     </code></pre>
                 </section>
-                
-                
+
+
                 <section data-background="black">
                     <h2>to.</h2>
                     <h3>Schema upgrade</h3>
@@ -318,7 +318,7 @@ liquibase dbDoc ./dbDoc
 liquibase update
                     </code></pre>
                 </section>
-                
+
                 <section>
                     <h2>Key concepts</h2>
                     <ul>
@@ -327,25 +327,25 @@ liquibase update
                         <li>databasechangelog : id, author, dateexecuted, orderexecuted, md5sum, description, comments, ...</li>
                     </ul>
                 </section>
-                
+
                 <section>
                     <h2>The hash*@%! ? WHAT ?</h2>
                     <p><i>"I can't apply my databasechangelog : liquibase is complaining that the code that has already been deployed on my db ?!!"</i></p>
                 </section>
-                
+
                 <section data-background="black">
                     <p><i>Yep buddy, that's normal and it's pretty cool, just add a new changeset to patch your previous one and other people will be happy ;-p</i></p>
                     <img src="http://i.giphy.com/3oFyDl7xbRgcAu8O8E.gif" alt="fun"/>
-                    
+
                 </section>
-                
-                
-                
+
+
+
 
                 <section data-background="black">
                     <h2>databasechangelog overview</h2>
                     <pre><code>
-                   id                    |       author        |        dateexecuted        | orderexecuted |               md5sum               |                     description                     | liquibase 
+                   id                    |       author        |        dateexecuted        | orderexecuted |               md5sum               |                     description                     | liquibase
 -----------------------------------------+---------------------+----------------------------+---------------+------------------------------------+-----------------------------------------------------+-----------
  1417670162732-1                         | salad74             | 2015-07-21 10:24:54.721108 |             1 | 7:1d454f92543dfc2f97501ba16669c6d7 | createSequence                                      | 3.3.2
  1417670162732-2                         | salad74             | 2015-07-21 10:24:54.739246 |             2 | 7:820672cebd4d2c7adf8de021c9304788 | createSequence                                      | 3.3.2
@@ -354,8 +354,8 @@ liquibase update
 
                     </code></pre>
                 </section>
-                
-                
+
+
                 <section>
                     <h2>Liquibase</h2>
                     <h3>Used features</h3>
@@ -381,7 +381,7 @@ liquibase update
                         <li>Contexts</li>
                     </ul>
                 </section>
-                
+
                 <section>
                     <h2>Real life scenarios</h2>
                     <ul>
@@ -395,7 +395,7 @@ liquibase update
                     </ul>
                 </section>
 
-                
+
                 <section>
                     <h2>The "liquibase dilemma"</h2>
                     <p>Should i recreate a non "liquified" database to get
@@ -419,14 +419,14 @@ liquibase update
                         <li><a href="http://www.datical.com/wp-content/uploads/White-Paper-The-DBAs-Roles-in-DevOps.pdf">The DBA's Role in Devops</a> by <a href="http://www.datical.com">Datical</a> (Enterprise Liquibase Edition and much more)</li>
                     </ul>
                 </section>
-                
-                
+
+
                 <section>
                     <h2>Tools</h2>
                     <h3>Schemacrawler</h3>
                     <img src="http://static.open-open.com/news/uploadImg/20111018/20111018084744_195.png" alt="Schemacrawler logo"/>
                 </section>
-                
+
                 <!-- The schemacrawler part -->
                 <section>
                     <h2>Now you have a database ...</h2>
@@ -437,7 +437,7 @@ liquibase update
                         <li>Lints : check/detect/test and report design quality</li>
                     </ul>
                 </section>
-                
+
                 <section>
                     <h2>Side goals</h2>
                     <ul>
@@ -451,7 +451,7 @@ liquibase update
                         <li>Prototyping POCs</li>
                     </ul>
                 </section>
-                
+
                 <section>
                     <h2>Schemacrawler (Code) donations</h2>
                     <ul>
@@ -460,12 +460,158 @@ liquibase update
                         <li>Some bug reports</li>
                         <li>Additional lints</li>
                         <li>First usage in continuous integration on Travis</li>
-                        
+
                     </ul>
                 </section>
-                
-                
-                
+
+                <!-- The schemacrawler part -->
+                <section>
+                    <h2>Now you have a database ...</h2>
+                    <h3>How to better understand it, check and test its design quality ...</h3>
+                    <ul>
+                        <li>Better understand database design/relations</li>
+                        <li>Draw database diagrams</li>
+                        <li>Lints : check/detect/test and report design quality</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Side goals</h2>
+                    <ul>
+                        <li>Giving a developer open source development experience</li>
+                        <li>Getting control on our tools</li>
+                        <li>Opportunities to learn by practice (git, continuous build, SaaS services, collaboration) on up-to-date technologies</li>
+                        <li>Taking part in open source community</li>
+                        <li>Contributing to production automation</li>
+                        <li>Having fun and develop cool tools</li>
+                        <li>Code coverage challenging</li>
+                        <li>Prototyping POCs</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Schemacrawler (Code) donations</h2>
+                    <ul>
+                        <li>deb and rpm installers</li>
+                        <li>fully crossplatform installer, Izpack based</li>
+                        <li>Some bug reports</li>
+                        <li>Additional lints</li>
+                        <li>First usage in continuous integration on Travis</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Schemacrawler lints</h2>
+                    <ul>
+                      <li>Evaluating the quality and consistency of a database schema</li>
+                      <li>Set of native lints</li>
+                      <li>Helpfull but do not fit all our needs</li>
+                      <li>Contribute to the Schemacrawler project, and propose our own lints based on personnal experience and best practices</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Schemacrawler lints</h2>
+                    <h3>Step by step...</h3>
+                    <ul>
+                      <li>Simple lint development</li>
+                      <li>Continuous build (Travis)</li>
+                      <li>Test coverage (Coveralls)</li>
+                      <li>Dependencies update (VersionEye)</li>
+                      <li>Check source code with SonarQ</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Schemacrawler lints</h2>
+                    <h3>Collaborating</h3>
+                    <ul>
+                      <li>Often in contact with Sualeh thanks gitter, mail, issue tracker</li>
+                      <li>Some of our lints have been integrated in the native lints</li>
+                      <li>Bug reports</li>
+                      <li>Beta test</li>
+                      <li>New asked feature : continuous integration</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Schemacrawler lints</h2>
+                    <h3>Continuous integration</h3>
+                    <ul>
+                      <li>Need : automatic checking</li>
+                      <li>Liquibase scripts are run and database is checked at each commit on github</li>
+                      <li>Commit is rejected if the updates don't fit our quality requirements : one PK per table, no blob...</li>
+                      <li>Special cases are debated with the team, and exceptions are added if required</li>
+                    </ul>
+                </section>
+
+                <section data-background="black">
+                    <h2>Schemacrawler lints</h2>
+                    <h3>Continuous integration - Travis</h3>
+                    <pre><code class="hljs">
+sudo: required
+language: java
+cache:
+  directories:
+  - .autoconf
+  - $HOME/.m2
+jdk:
+- oraclejdk8
+services: postgresql
+addons:
+  postgresql: 9.3
+before_install:
+- env
+- export postgresql_version=9.3-1104-jdbc41
+- export liquibase_version=3.4.2
+- export schemacrawler_version=14.07.02
+- export schemacrawler_lint_version=1.1.3
+- echo "downloading and installing liquibase ${liquibase_version}"
+- wget https://github.com/liquibase/liquibase/releases/download/liquibase-parent-${liquibase_version}/liquibase-debian_${liquibase_version}_all.deb
+- sudo dpkg -i liquibase-debian_${liquibase_version}_all.deb
+- echo "downloading and installing postgres ${postgresql_version} driver."
+- wget http://central.maven.org/maven2/org/postgresql/postgresql/${postgresql_version}/postgresql-${postgresql_version}.jar
+- sudo cp  postgresql-${postgresql_version}.jar /usr/lib/liquibase-${liquibase_version}/lib/
+- echo "downloading and installing SchemaCrawler"
+- wget https://github.com/adriens/schemacrawler-deb/releases/download/${schemacrawler_version}/schemacrawler-deb_${schemacrawler_version}_all.deb
+- sudo dpkg -i schemacrawler-deb_${schemacrawler_version}_all.deb
+- wget https://github.com/mbarre/schemacrawler-additionnallints/releases/download/${schemacrawler_lint_version}/schemacrawler-additionnallints-${schemacrawler_lint_version}.jar
+- sudo cp schemacrawler-additionnallints-${schemacrawler_lint_version}.jar /opt/schemacrawler-${schemacrawler_version}/lib
+- sudo chmod +rx /opt/schemacrawler-${schemacrawler_version}/lib/schemacrawler-additionnallints-${schemacrawler_lint_version}.jar
+- echo "deploying pdc database."
+- dropdb --if-exists contratspart
+- psql -c 'create database contratspart;' -U postgres
+- cd cp
+- liquibase --driver=org.postgresql.Driver --username=postgres --url=jdbc:postgresql:contratspart --defaultSchemaName=public --changeLogFile=db.changelog.xml update
+- cd ..
+install:
+- mvn exec:exec
+notifications:
+  slack: dsi-mairie-noumea:IhlQJjnXibAztaC5FAmP4Bej
+</code></pre>
+                </section>
+
+                <section data-background="black">
+                    <h2>Schemacrawler lints</h2>
+                    <h3>Continuous integration - Travis</h3>
+                    <img src="img/schemacrawler_travis.png" alt="Continuous integration - Travis"/>
+                </section>
+
+                <section data-background="black">
+                    <h2>Schemacrawler lints</h2>
+                    <h3>Continuous integration - Slack notifications</h3>
+                    <img src="img/slack.png" alt="Slack notifications"/>
+                </section>
+
+                <section>
+                    <h2>Schemacrawler lints</h2>
+                    <h3>Next steps</h3>
+                    <ul>
+                      <li>Online reports</li>
+                      <li>Specific badge that shows up the database quality level (see coverity)</li>
+                    </ul>
+                </section>
+
                 <section>
                     <h2>Tools used to produce this slideshow (collaborative mode)</h2>
                     <h3>How this slideshow has been developped</h3>
@@ -475,11 +621,11 @@ liquibase update
                         <li>Any text editor : Kate, Atom, vim</li>
                         <li>git client</li>
                         <li>Web browser</li>
-                        
+
                     </ul>
                 </section>
-                
-                
+
+
                 <!-- ---------------------------------------          -->
                 <section data-background="#ff0000">
                     <h2>All CSS color formats are supported, like rgba() or hsl().</h2>
@@ -509,15 +655,15 @@ liquibase update
                 </section>
 
                 <section data-transition="slide">
-                    The train goes on … 
+                    The train goes on …
                 </section>
-                <section data-transition="slide"> 
-                    and on … 
+                <section data-transition="slide">
+                    and on …
                 </section>
-                <section data-transition="slide-in fade-out"> 
+                <section data-transition="slide-in fade-out">
                     and stops.
                 </section>
-                <section data-transition="fade-in slide-out"> 
+                <section data-transition="fade-in slide-out">
                     (Passengers entering and leaving)
                 </section>
                 <section data-transition="slide">
@@ -528,7 +674,7 @@ liquibase update
         <script src="js/reveal.js"></script>
         <script>
             Reveal.initialize({
-                
+
                 dependencies: { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
                 // Display controls in the bottom right corner
                 controls: true,
