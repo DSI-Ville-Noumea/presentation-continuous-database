@@ -216,6 +216,7 @@
                         <li><a href="https://www.linkedin.com/in/mich%C3%A8le-barr%C3%A9-2652b06">Michele Barre</a>/<a href="https://github.com/DSI-Ville-Noumea">Noumea City</a> (java/j2ee developer)</li>
                         <li><a href="https://www.linkedin.com/in/melaniegault">Melanie Gault</a>/<a href="https://github.com/DSI-Ville-Noumea">Noumea City</a> (sysadmin/architect/puppet)</li>
                         <li><a href="https://www.linkedin.com/in/sualeh">Sualeh Fatehi</a>/<a href="http://sualeh.github.io/SchemaCrawler/">Schemacrawler</a> (schemacrawler lead developer)</li>
+                        <li>Developers involved in continuous improvement</li>
                     </ul>
                 </section>
 
@@ -379,6 +380,7 @@ liquibase update
                     <ul>
                         <li>Tags</li>
                         <li>Contexts</li>
+                        <li>Rollback</li>
                     </ul>
                 </section>
 
@@ -460,7 +462,6 @@ liquibase update
                         <li>Some bug reports</li>
                         <li>Additional lints</li>
                         <li>First usage in continuous integration on Travis</li>
-
                     </ul>
                 </section>
 
@@ -490,7 +491,7 @@ liquibase update
                 </section>
 
                 <section>
-                    <h2>Schemacrawler (Code) donations</h2>
+                    <h2>Schemacrawler (Code) donations/collaborations</h2>
                     <ul>
                         <li>deb and rpm installers</li>
                         <li>fully crossplatform installer, Izpack based</li>
@@ -532,6 +533,22 @@ liquibase update
                       <li>Beta test</li>
                       <li>New asked feature : continuous integration</li>
                     </ul>
+                </section>
+                
+                <section>
+                    <h2>Schemacrawler and continous integration</h2>
+                    <h3>The final ticket that made it possible </h3>
+                    <a href="https://github.com/sualeh/SchemaCrawler/issues/30">sualeh/SchemaCrawler#39</a>
+                    <blockquote>We are using continuous quality check and integration on an always
+                        increasing number of projects, but this essentially applies to code
+                        (Java code). This is done by Travis.</blockquote>
+                </section>
+                <section>
+                    <h2>Schemacrawler and continous integration</h2>
+                    <blockquote>What i begin to think about and would save a lot of time to me is :
+                        to run lint on commit event on gh, on Travis and call lint execution that
+                        would return an error status code when two many high are triggered, or
+                        based on certain lint filtering conditions.</blockquote>
                 </section>
 
                 <section>
