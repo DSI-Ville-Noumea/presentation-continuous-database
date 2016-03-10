@@ -21,17 +21,90 @@
     <body>
         <div class="reveal">
             <div class="slides">
+                
 
                 <section>
                     <h1>Database without dba</h1>
-                    <h2>An Agile Database approach for (very) little teams.</h2>
+                    <h2>An Agile/DevOps Database approach for (very) little teams.</h2>
                     <p><a href="https://github.com/DSI-Ville-Noumea">Adrien Sales/Ville de Noumea</a></p>
                 </section>
+                
+                <section>
+                    <h1>DevOps</h1>
+                    <h2>Goals</h2>
+                    <ul>
+                        <li>Increase Application uptime</li>
+                        <li>Reduce overall IT spent on Infrastructure</li>
+                        <li>Increase release velocities : faster and more often</li>
+                    </ul>
+                </section>
+                
+                <section>
+                    <h1>What is DevOps</h1>
+                    <h2>in a few words</h2>
+                    <ul>
+                        <li>Collab between IT professionals</li>
+                        <li>Culture of (operational) continuous improvement : facts rather than philosophy</li>
+                        <li><i>Not a prescribed set of practices, but rather high depending on teams, technologies and processes which make up organization</i></li>
+                    </ul>
+                </section>
+                
+                <section>
+                    <h1>Communication</h1>
+                    <h2>the core</h2>
+                    <ul>
+                        <li>Educate each other</li>
+                        <li>Understand what matters most to their counterparts</li>
+                        <li>Dev understanding how underlying systems are configured/working : knowledge of impact of changes between dev and prod</li>
+                        <li>Empathy between the different IT stakeholders</li>
+                        <li>As empaty grows in the IT Org. teams begin naturally come together to collaborate</li>
+                        <li>Egocentric vs. hollistic view of the system and collaboration to optimize the value stream</li>
+                    </ul>
+                </section>
+                
+                <section>
+                    <h1>Shifting Left</h1>
+                    <h2></h2>
+                    <ul>
+                        <li>Bringing production concerns further left in the develop/test/deploy cycle</li>
+                        <li>Making note of specific concerns that will need to be addressed for the push to production</li>
+                        <li>Working on issues before they become issues</li>
+                        <li>Reduce time and resource spent in troubleshooting</li>
+                    </ul>
+                </section>
+                
+                <section>
+                    <h2>Cost of a Bugfix</h2>
+                    <img src="img/relative-cost-of-a-bugfix.png" alt="Relative Cost Of a Bugfix"/>
+                </section>
 
+                <section data-background="black">
+                    <p><i>Not automating every process, but rather only those tasks that are manual,
+                            rote, tedious aspects of the job and consume a great deal of your time.</i></p>
+                </section>
+                
+                <section data-background="black">
+                    <p><i>Free up time for IT pros. to think about more strategic issues, and spend more
+                            time collaborating with other groups to driver additional value through innovation
+                            in their products and services.</i></p>
+                </section>
+                
+                
+                <section>
+                    <h2>Benefits</h2>
+                    <h3></h3>
+                    <ul>
+                        <li>Environments more in sync</li>
+                        <li>More testing environments (and easier to reproduce/fix bugs), see previous slide</li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </section>
+                <!-- real life -->
                 <section>
                     <h2>The sentences that triggered everything</h2>
                     <h3>Make life easier</h3>
-                    <p>
                     <ul>
                         <li>We cannot guarantee you that we'll run the right sql script on
                             the right database nor on the right environment</li>
@@ -40,8 +113,10 @@
                         <li>It's time consuming to connect to databases to run sql on them
                             and we think we don't provide any added value while doing this</li>
                     </ul>
-                    </p>
                 </section>
+                
+                
+                
 
                 <section>
                     <h2>The sentences that triggered everything</h2>
@@ -296,6 +371,7 @@ liquibase update
                     <h2>Links and resources</h2>
                     <ul>
                         <li><a href="http://fr.slideshare.net/MlanieGault/201406automatisation-de-la-productionsieinfra">Production automation</a></li>
+                        <li><a href="http://www.datical.com/wp-content/uploads/White-Paper-The-DBAs-Roles-in-DevOps.pdf">The DBA's Role in Devops</a> by <a href="http://www.datical.com">Datical</a> (Enterprise Liquibase Edition and much more)</li>
                     </ul>
                 </section>
                 
