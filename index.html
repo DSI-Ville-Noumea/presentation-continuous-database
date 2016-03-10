@@ -73,7 +73,7 @@
                     </ul>
                 </section>
                 
-                <section>
+                <section data-background="black">
                     <h2>Cost of a Bugfix</h2>
                     <img src="img/relative-cost-of-a-bugfix.png" alt="Relative Cost Of a Bugfix"/>
                 </section>
@@ -89,24 +89,52 @@
                             in their products and services.</blockquote>
                 </section>
                 
-                <section>
-                    <h2>DBA and and DevOps</h2>
-                    <img src="img/dba-roles.png" alt="DBA roles"/>
-                </section>
-                
-                
-                
+
                 <section>
                     <h2>Benefits</h2>
                     <h3></h3>
                     <ul>
                         <li>Environments more in sync</li>
                         <li>More testing environments (and easier to reproduce/fix bugs), see previous slide</li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
+                        <li>Accelerates delivery of applications</li>
+                        <li>Increased uptime</li>
+                        <li>More frequent release of innovative features</li>
                     </ul>
                 </section>
+                
+                <section>
+                    <h2>DBA and and DevOps</h2>
+                    <img src="img/dba-roles.png" alt="DBA roles"/>
+                </section>
+                
+                <section data-background="black">
+                    <blockquote>Great, but ... what can we do NOW to save resources and focus on the real deal ?</blockquote>
+                    <img src="http://i.giphy.com/3ornkczqjMrIUmdmSs.gif" alt="And now ?"/>
+                </section>
+                
+                <section data-background="black">
+                    <h2>Human values</h2>
+                    <ul>
+                        <li>Have empathy for people working with you</li>
+                        <li>Respect and rely on people expertises, and valorize them</li>
+                        <li>Never stop to improve yourself as well as the system</li>
+                    </ul>
+                </section>
+                
+                
+                <section data-background="black">
+                    <h2>IT shintoism</h2>
+                    <h3>Loving softwares and your system</h3>
+                    <ul>
+                        <li>Have empathy for systems, code and software : consider them as living things</li>
+                        <li>Respect them and use them where they are good at.</li>
+                    </ul>
+                    <img src="http://i.giphy.com/UMLfKCWTGwVoc.gif" alt="IT Shinto"/>
+                </section>
+                
+                
+                
+                
                 <!-- real life -->
                 <section>
                     <h2>The sentences that triggered everything</h2>
@@ -137,14 +165,14 @@
 
 
 
-                <section>
+                <section data-background="black">
                     <h2>Still remembering that day...</h2>
                     <p>
                         <img src="http://i.giphy.com/26tP0ajQqkYICLDsQ.gif"/>
                     </p>
                 </section>
 
-                <section>
+                <section data-background="black">
                     <h2>...and finding opportunities.</h2>
                     <p>
                         <img src="http://i.giphy.com/cpRQzY4VS3V3W.gif"/>
@@ -156,12 +184,12 @@
                 <section>
                     <h2>Agility, flexibiliy</h2>
                     <ul>
-                        <li>from weakness to opportunities</li>
-                        <li>automate everything</li>
-                        <li>version/tag anything</li>
-                        <li>threat database like any other system component</li>
-                        <li>manage databases as code</li>
-                        <li>push code to databases without having to give human access to them</li>
+                        <li>Transform weakness to opportunities</li>
+                        <li>Automate</li>
+                        <li>Version/tag anything</li>
+                        <li>Manage database like any other system component</li>
+                        <li>Manage databases as (and by) code</li>
+                        <li>Push code to databases without having to give human access to them</li>
                     </ul>
                 </section>
 
@@ -212,21 +240,32 @@
                     </ul>
                 </section>
                 
-                 <section>
+                <section>
                     <h2>Tools</h2>
                     <h3>Liquibase</h3>
                     <img src="http://www.liquibase.org/custom_images/home_tagline.png" alt="Liquibase logo"/>
+                </section>
+                
+                
+                <section>
+                    <h2>Key concepts</h2>
+                    <ul>
+                        <li>Changes are described in a simple, readable format</li>
+                        <li>Everything you need to know about the <i>why</i> of a database change is tied to the change itself</li>
+                        <li>Is is easy and possible for DBAs to review changes before deployment</li>
+                    </ul>
+                    
                 </section>
                 
                 <section>
                     <h2>Security</h2>
                     <ul>
                         <li>We don't want apps (war) to upgrade database themselves</li>
-                        <li>Apps are connecting to db with dedicated accounts that can only execute DML : datasource cannot add column/drop table</li>
+                        <li>Apps are connected to db with dedicated accounts that can only execute DML : datasource cannot add column/drop table</li>
                         <li>Table privileges are fine grained</li>
                         <li>Apps connect to db through a dedicated user : privileges are granted to him, table names are resolved by synonyms/search_path</li>
                         <li>DDL queries are only run by liquibase commands (adm_users)</li>
-                        <li>adm_users are not granted to connect from app servers (tomcat)</li>
+                        <li>adm_users are not granted to connect from app servers (tomcat), only from the server that run changes</li>
                     </ul>
                 </section>
 
