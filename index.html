@@ -127,11 +127,12 @@
                     </ul>
                 </section>
 
-                <section data-background="black">
+                <section data-background="img/shinto-temple.jpg">
                     <h2>shintoism</h2>
                     <blockquote>The followers of Shintoism believe that spiritual powers exist in the
                         natural world. They believe that "spirits" called kami live in natural places
                         such as in animals, plants, stones, mountains, rivers, people and even the dead. </blockquote>
+                    
                 </section>
 
                 <section data-background="black">
@@ -216,7 +217,7 @@
                         <li><a href="https://www.linkedin.com/in/mich%C3%A8le-barr%C3%A9-2652b06">Michele Barre</a>/<a href="https://github.com/DSI-Ville-Noumea">Noumea City</a> (java/j2ee developer)</li>
                         <li><a href="https://www.linkedin.com/in/melaniegault">Melanie Gault</a>/<a href="https://github.com/DSI-Ville-Noumea">Noumea City</a> (sysadmin/architect/puppet)</li>
                         <li><a href="https://www.linkedin.com/in/sualeh">Sualeh Fatehi</a>/<a href="http://sualeh.github.io/SchemaCrawler/">Schemacrawler</a> (schemacrawler lead developer)</li>
-                        <li>Developers involved in continuous improvement</li>
+                        <li>Developers involved in continuous improvement.</li>
                     </ul>
                 </section>
 
@@ -241,7 +242,7 @@
                     </ul>
                 </section>
 
-                <section>
+                <section data-background="black">
                     <h2>Tools</h2>
                     <h3>Liquibase</h3>
                     <img src="http://www.liquibase.org/custom_images/home_tagline.png" alt="Liquibase logo"/>
@@ -264,11 +265,18 @@
                         <li>We don't want apps (war) to upgrade database themselves</li>
                         <li>Apps are connected to db with dedicated accounts that can only execute DML : datasource cannot add column/drop table</li>
                         <li>Table privileges are fine grained</li>
-                        <li>Apps connect to db through a dedicated user : privileges are granted to him, table names are resolved by synonyms/search_path</li>
-                        <li>DDL queries are only run by liquibase commands (adm_users)</li>
-                        <li>adm_users are not granted to connect from app servers (tomcat), only from the server that run changes</li>
                     </ul>
                 </section>
+                
+                <section>
+                    <h2>Security</h2>
+                    <ul>
+                        <li>We don't want apps (war) to upgrade database themselves</li>
+                        <li>Apps are connected to db with dedicated accounts that can only execute DML : datasource cannot add column/drop table</li>
+                        <li>Table privileges are fine grained</li>
+                    </ul>
+                </section>
+                
 
                 <section>
                     <h2>Upgrading databases</h2>
