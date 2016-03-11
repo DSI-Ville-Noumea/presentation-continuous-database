@@ -542,7 +542,7 @@ liquibase update
                     <h2>Schemacrawler lints</h2>
                     <h3>Collaborating</h3>
                     <ul>
-                      <li>Often in contact with Sualeh thanks gitter, mail, issue tracker</li>
+                      <li>Often in contact with Sualeh thanks to gitter, mail, github issue tracker</li>
                       <li>Some of our lints have been integrated in the native lints</li>
                       <li>Bug reports</li>
                       <li>Beta test</li>
@@ -561,7 +561,7 @@ liquibase update
                 <section>
                     <h2>Schemacrawler and continous integration</h2>
                     <blockquote>What i begin to think about and would save a lot of time to me is :
-                        to run lint on commit event on gh, on Travis and call lint execution that
+                        to run lint on commit event on gh, on Travis and call a lint execution that
                         would return an error status code when two many high are triggered, or
                         based on certain lint filtering conditions.</blockquote>
                 </section>
@@ -578,8 +578,8 @@ liquibase update
                 </section>
 
                 <section data-background="black">
-                    <h2>Schemacrawler lints</h2>
-                    <h3>Continuous integration - Travis</h3>
+                    <h2>Travis</h2>
+                    <h3>Set env</h3>
                     <pre><code class="hljs">
 sudo: required
 language: java
@@ -592,34 +592,45 @@ jdk:
 services: postgresql
 addons:
   postgresql: 9.3
+</code></pre>
+</section>
+
+<section data-background="black">
+<h2>Runtime install</h2>     
+<pre><code class="hljs">
 before_install:
 - env
 - export postgresql_version=9.3-1104-jdbc41
 - export liquibase_version=3.4.2
 - export schemacrawler_version=14.07.02
 - export schemacrawler_lint_version=1.1.3
-- echo "downloading and installing liquibase ${liquibase_version}"
 - wget https://github.com/liquibase/liquibase/releases/download/liquibase-parent-${liquibase_version}/liquibase-debian_${liquibase_version}_all.deb
 - sudo dpkg -i liquibase-debian_${liquibase_version}_all.deb
-- echo "downloading and installing postgres ${postgresql_version} driver."
 - wget http://central.maven.org/maven2/org/postgresql/postgresql/${postgresql_version}/postgresql-${postgresql_version}.jar
 - sudo cp  postgresql-${postgresql_version}.jar /usr/lib/liquibase-${liquibase_version}/lib/
-- echo "downloading and installing SchemaCrawler"
 - wget https://github.com/adriens/schemacrawler-deb/releases/download/${schemacrawler_version}/schemacrawler-deb_${schemacrawler_version}_all.deb
 - sudo dpkg -i schemacrawler-deb_${schemacrawler_version}_all.deb
 - wget https://github.com/mbarre/schemacrawler-additionnallints/releases/download/${schemacrawler_lint_version}/schemacrawler-additionnallints-${schemacrawler_lint_version}.jar
 - sudo cp schemacrawler-additionnallints-${schemacrawler_lint_version}.jar /opt/schemacrawler-${schemacrawler_version}/lib
 - sudo chmod +rx /opt/schemacrawler-${schemacrawler_version}/lib/schemacrawler-additionnallints-${schemacrawler_lint_version}.jar
-- echo "deploying pdc database."
+</code></pre>
+</section>
+
+                <section data-background="black">
+                    <h2>Lint !</h2>
+                    <pre><code class="hljs">
 - dropdb --if-exists contratspart
 - psql -c 'create database contratspart;' -U postgres
 - cd cp
+- echo "Updating schema objects"
 - liquibase --driver=org.postgresql.Driver --username=postgres --url=jdbc:postgresql:contratspart --defaultSchemaName=public --changeLogFile=db.changelog.xml update
 - cd ..
 install:
+- echo "Running lints"
 - mvn exec:exec
 notifications:
-  slack: dsi-mairie-noumea:IhlQJjnXibAztaC5FAmP4Bej
+- echo "Notify slack channel with live lints"
+  slack: dsi-mairie-noumea:********************
 </code></pre>
                 </section>
 
@@ -627,16 +638,16 @@ notifications:
                     <h2>Schemacrawler lints</h2>
                     <h3>Continuous integration - Travis</h3>
                     <img src="img/schemacrawler_travis.png" alt="Continuous integration - Travis"/>
+                    <!-- https://travis-ci.com/DSI-Ville-Noumea/contrats-particuliers-liquibase/builds/22322931 -->
                 </section>
+                
 
                 <section data-background="black">
-                    <h2>Schemacrawler lints</h2>
-                    <h3>Continuous integration - Slack notifications</h3>
+                    <h2>Schemacrawler continuous lints & Slack notifications</h2>
                     <img src="img/slack.png" alt="Slack notifications"/>
                 </section>
                 
                 <section data-background="black">
-                    <h2>The feedback</h2>
                     <h3><a href="https://github.com/sualeh/SchemaCrawler/issues/30">sualeh/SchemaCrawler#39</a></h3>
                     <blockquote>"I love the way you guys are using SchemaCrawler!" - @sualeh</blockquote>
                     <img src="img/feedback.png" alt="Feedback"/>
@@ -648,12 +659,12 @@ notifications:
                     <ul>
                       <li>Online reports</li>
                       <li>Specific badge that shows up the database quality level (see coverity)</li>
+                      <li>Develop templates for nice lint dashboards, charts, ... and quality scores</li>
                     </ul>
                 </section>
 
                 <section>
-                    <h2>Tools used to produce this slideshow (collaborative mode)</h2>
-                    <h3>How this slideshow has been developped</h3>
+                    <h2>Tools used to produce this slideshow</h2>
                     <ul>
                         <li>Reveal.js</li>
                         <li>Github</li>
