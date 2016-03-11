@@ -321,7 +321,7 @@ export TARGET_VERSION=1.04.00
 cd liquibase
 # Switch to tag
 git checkout tags/${TARGET_VERSION}
-# report pending upgrades (dba not done, but review possible)
+# reviewing pending upgrades
 liquibase dbDoc ./dbDoc
 # perform upgrade
 liquibase update
@@ -375,6 +375,13 @@ liquibase update
                         <li>Supports context-dependent logic : partially</li>
                         <li>Generate Database change documentation</li>
                         <li>Generate Database "diffs" : check if ERP changes db schema</li>
+                    </ul>
+                </section>
+                
+                <section>
+                    <h2>Liquibase</h2>
+                    <h3>Used features</h3>
+                    <ul>
                         <li>Automatically generate SQL scripts for DBA code review</li>
                         <li>Open Source: Apache 2.0 License : code donation, public roadmap</li>
                         <li>Java APIs for executing and embedding</li>
@@ -382,6 +389,7 @@ liquibase update
                         <li>Extensions : db2i for AS400->PgSql Migrations</li>
                     </ul>
                 </section>
+                
                 <section>
                     <h2>Liquibase</h2>
                     <h3>Not (yet) used features</h3>
