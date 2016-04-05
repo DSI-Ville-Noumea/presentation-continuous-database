@@ -23,15 +23,15 @@
             <div class="slides">
 
                 <!--data-background="img/shinto-temple.jpg"-->
-                
+
                 <!-- Shinto quotes
                 "Sincerity is the mother of knowledge."
                 -->
-                
+
                 <section data-background="img/shinto-circle.jpg">
                     <blockquote>"Even the wishes of an ant reach to heaven."</blockquote>
                 </section>
-                
+
                 <section data-background="black">
                     <h2>Database without dba</h2>
                     <h3>An Agile/DevOps Database approach for (very) little teams.</h3>
@@ -434,9 +434,14 @@ liquibase update
                     <h2>Liquibase Code donations</h2>
                     <ul>
                         <li>deb and rpm installers, merged in base source code, now part of official release</li>
-                        <li>Puppet module (soon released to open source)</li>
+                        <li>Puppet module (published on the puppet forge)</li>
                         <li>Some bug fixes (with related unit tests)</li>
                     </ul>
+                </section>
+
+                <section>
+                    <h2>Liquibase Code donations</h2>
+                  <img src="img/puppet_liquibase.png" alt="puppet"/>
                 </section>
 
                 <section>
@@ -465,7 +470,7 @@ liquibase update
                         <li>Lints</li>
                     </ul>
                 </section>
-                
+
                 <section data-background="black">
                     <h2>Who uses</h2>
                     <img src="img/who-uses-schemacrawler.png" alt="Who uses schemacrawler ?"/>
@@ -505,6 +510,13 @@ liquibase update
                     <h2>Schemacrawler native lints</h2>
                     <ul>
                       <li>Evaluating the quality and consistency of a database schema</li>
+                        <ul>
+                          <li>check table without PK</li>
+                          <li>check that FK has the same type as its referenced PK</li>
+                          <li>check table with all nullable column</li>
+                          <li>check empty table</li>
+                          <li><a href="http://sualeh.github.io/SchemaCrawler/lint.html">and many others...</a></li>
+                        </ul>
                       <li>Helpfull but do not fit all our needs</li>
                     </ul>
                 </section>
@@ -516,18 +528,19 @@ liquibase update
 
                 <section>
                     <h2>Schemacrawler additionnal lints</h2>
-                    <h3>Step by step...</h3>
                     <ul>
-                      <li>Simple lint development</li>
-                      <li>Continuous build (Travis)</li>
-                      <li>Test coverage (Coveralls)</li>
-                      <li>Dependencies update (VersionEye)</li>
-                      <li>Check source code with SonarQ</li>
+                      <li>check content vs column data type</li>
+                      <li>check on not normalized content</li>
+                      <li>check column size</li>
+                      <li>check table/column remarks</li>
+                      <li>check PK data type</li>
+                      <li>check table/column case</li>
+                      <li><a href="http://mbarre.github.io/schemacrawler-additionnallints">...</a></li>
                     </ul>
                 </section>
 
                 <section>
-                    <h2>Schemacrawler lints</h2>
+                    <h2>Native lints & Additionnal lints</h2>
                     <h3>Collaborating</h3>
                     <ul>
                       <li>Often in contact with Sualeh thanks to gitter, github issue tracker</li>
@@ -544,11 +557,11 @@ liquibase update
                     <blockquote>"We are using continuous quality check and integration on an always
                         increasing number of projects, but this essentially applies to code
                         (Java code). This is done by Travis."</blockquote>
-                    
+
                     <blockquote><a href="https://github.com/sualeh/SchemaCrawler/issues/30">sualeh/SchemaCrawler#39</a></blockquote>
                 </section>
                 <section data-background="black">
-                    
+
                     <blockquote>"What I begin to think about and would save a lot of time to me is :
                         to run lint on commit event on gh, on Travis and call a lint execution that
                         would return an error status code when two many high are triggered, or
@@ -563,9 +576,11 @@ liquibase update
                       <li>Need : automatic checking</li>
                       <li>Liquibase scripts are run and database is checked at each commit on github</li>
                       <li>Commit is rejected if the updates don't fit our quality requirements : one PK per table, no blob...</li>
+                      <li>All developer are notified thanks a travis/slack integration</li>
                       <li>Special cases are debated with the team, and exceptions are added if required</li>
                     </ul>
                 </section>
+
 
                 <section data-background="black">
                     <h2>Travis</h2>
@@ -586,7 +601,8 @@ addons:
 </section>
 
 <section data-background="black">
-<h2>Runtime install</h2>
+    <h2>Travis</h2>
+    <h3>Runtime install</h3>
 <pre><code class="hljs">
 before_install:
 - env
@@ -607,7 +623,8 @@ before_install:
 </section>
 
                 <section data-background="black">
-                    <h2>Lint !</h2>
+                    <h2>Travis</h2>
+                    <h3>Lint !</h3>
                     <pre><code class="hljs">
 - dropdb --if-exists contratspart
 - psql -c 'create database contratspart;' -U postgres
@@ -636,6 +653,12 @@ notifications:
                 </section>
 
                 <section data-background="black">
+                    <h2>Schemacrawler lints</h2>
+                    <h3>Define exceptions</h3>
+                    <img src="img/lints_exceptions.png" alt="lint exceptions"/>
+                </section>
+
+                <section data-background="black">
                     <h3><a href="https://github.com/sualeh/SchemaCrawler/issues/39">sualeh/SchemaCrawler#39</a></h3>
                     <blockquote>"I love the way you guys are using SchemaCrawler!" - @sualeh</blockquote>
                     <img src="img/feedback.png" alt="Feedback"/>
@@ -650,21 +673,35 @@ notifications:
                       <li>Specific badge that shows up the database quality level (see code climate)</li> <!--ajouter screenshot -->
                     </ul>
                 </section>
-                
+
+                <section>
+                    <h2>Schemacrawler additionnal lints</h2>
+                    <h3>Side effects</h3>
+                    <ul>
+                      <li>Discover Open Source spirit and contribution</li>
+                      <li>Test many new tools that are now totally integrated to our projects</li>
+                        <ul>
+                          <li>Travis - Continuous integration</li>
+                          <li>Coveralls - Test coverage</li>
+                          <li>VersionEye - Dependencies update</li>
+                          <li>SonarQ - Check source code quality</li>
+                        </ul>
+                    </ul>
+                </section>
+
                 <section>
                     <h2>ROI on time invested in open source dev.</h2>
-                    
                     <ul>
                         <li>Vital for you to make your collaborators work on high value added and challenging tasks</li>
-                        <li>Do not make them work on things you don't want to work on beaccuase they are boring</li>
+                        <li>Do not make them work on things you don't want to work on because they are boring</li>
                         <li><a href="http://futurice.com/blog/year-2015-in-company-sponsored-open-source">Why you should pay employees for free-time Open Source contributions</a></li>
                     </ul>
                 </section>
-                
+
                 <section>
                     <h2>Manager/coworker feedback</h2>
                 </section>
-                
+
                 <section>
                     <h2>Developer feedback</h2>
                 </section>
@@ -686,7 +723,7 @@ notifications:
                         <li>Web browser</li>
                     </ul>
                 </section>
-                
+
                 <section data-background="img/shinto-paint.JPG">
                     <blockquote>"Sincerity is the mother of knowledge."</blockquote>
                 </section>
