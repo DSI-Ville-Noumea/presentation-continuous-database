@@ -160,11 +160,6 @@
                 <section data-background-iframe="http://www.slideshare.net/slideshow/embed_code/key/pyD68NCj87AJZ9?startSlide=3">
                 </section>
 
-
-
-
-
-
                 <!-- real life -->
                 <section>
                     <h2>Now, let's deal with real life.</h2>
@@ -463,12 +458,20 @@ liquibase update
 
                 <!-- The schemacrawler part -->
                 <section>
+                    <section>
                     <h2>Now you have a database ...</h2>
                     <ul>
                         <li>Better database design/relations understanding</li>
                         <li>Draw database diagrams</li>
                         <li>Lints</li>
                     </ul>
+                    </section>
+                    <section>
+                        <img src="img/diagram.png" alt="Schemacrawler diagram"/>
+                    </section>
+                    <section>
+                        <img src="img/lints.png" alt="Schemacrawler lints"/>
+                    </section>
                 </section>
 
                 <section data-background="black">
@@ -527,7 +530,7 @@ liquibase update
                 </section>
 
                 <section>
-                    <h2>Schemacrawler additionnal lints</h2>
+                    <h2>Schemacrawler additional lints</h2>
                     <ul>
                       <li>check content vs column data type</li>
                       <li>check on not normalized content</li>
@@ -540,13 +543,14 @@ liquibase update
                 </section>
 
                 <section>
-                    <h2>Native lints & Additionnal lints</h2>
-                    <h3>Collaborating</h3>
+                    <h2>Native lints & Additional lints</h2>
+                    <h3>Collaboration</h3>
                     <ul>
                       <li>Often in contact with Sualeh thanks to gitter, github issue tracker</li>
-                      <li>One of our lints has been integrated in the native lints</li>
+                      <li>Some of our lints have been integrated to the native lints</li>
                       <li>Bug reports</li>
-                      <li>Beta test</li>
+                      <li>Pull requests</li>
+                      <li>Tests</li>
                       <li>New asked feature : continuous integration (CI)</li>
                     </ul>
                 </section>
@@ -570,21 +574,18 @@ liquibase update
                 </section>
 
                 <section>
-                    <h2>Schemacrawler lints</h2>
-                    <h3>Workflow</h3>
-                    <ul>
-                      <li>Need : automatic checking</li>
-                      <li>Liquibase scripts are run and database is checked at each commit on github</li>
-                      <li>Commit is rejected if the updates don't fit our quality requirements : one PK per table, no blob...</li>
-                      <li>All developer are notified thanks a travis/slack integration</li>
-                      <li>Special cases are debated with the team, and exceptions are added if required</li>
-                    </ul>
-                </section>
-
-
-                <section data-background="black">
-                    <h2>Travis</h2>
-                    <h3>Set env</h3>
+                    <section>
+                        <h2>Schemacrawler lints</h2>
+                        <h3>Workflow</h3>
+                        <ul>
+                          <li>Need : automatic checking</li>
+                          <li>Liquibase scripts are run and database is checked at each commit on github</li>
+                          <li>Commit is rejected if the updates don't fit our quality requirements : one PK per table, no blob...</li>
+                        </ul>
+                    </section>
+                    <section data-background="black">
+                        <h2>Travis</h2>
+                        <h3>Set env</h3>
                     <pre><code class="hljs">
 sudo: required
 language: java
@@ -598,12 +599,11 @@ services: postgresql
 addons:
   postgresql: 9.3
 </code></pre>
-</section>
-
-<section data-background="black">
-    <h2>Travis</h2>
-    <h3>Runtime install</h3>
-<pre><code class="hljs">
+                    </section>
+                    <section data-background="black">
+                        <h2>Travis</h2>
+                        <h3>Runtime install</h3>
+                        <pre><code class="hljs">
 before_install:
 - env
 - export postgresql_version=9.3-1104-jdbc41
@@ -620,12 +620,12 @@ before_install:
 - sudo cp schemacrawler-additionnallints-${schemacrawler_lint_version}.jar /opt/schemacrawler-${schemacrawler_version}/lib
 - sudo chmod +rx /opt/schemacrawler-${schemacrawler_version}/lib/schemacrawler-additionnallints-${schemacrawler_lint_version}.jar
 </code></pre>
-</section>
+                    </section>
 
-                <section data-background="black">
-                    <h2>Travis</h2>
-                    <h3>Lint !</h3>
-                    <pre><code class="hljs">
+                    <section data-background="black">
+                        <h2>Travis</h2>
+                        <h3>Lint !</h3>
+                        <pre><code class="hljs">
 - dropdb --if-exists contratspart
 - psql -c 'create database contratspart;' -U postgres
 - cd cp
@@ -639,23 +639,41 @@ notifications:
 - echo "Notify slack channel with live lints"
   slack: dsi-mairie-noumea:********************
 </code></pre>
+                    </section>
+
+                    <section data-background="img/schemacrawler_travis.png">
+                        <!-- <img src="img/schemacrawler_travis.png" alt="Continuous integration - Travis"/> -->
+                        <!-- https://travis-ci.com/DSI-Ville-Noumea/contrats-particuliers-liquibase/builds/22322931 -->
+                    </section>
                 </section>
+                <section>
+                    <section>
+                        <h2>Schemacrawler lints</h2>
+                        <h3>Workflow</h3>
+                        <ul>
+                            <li>All developer are notified thanks a travis/slack integration</li>
+                        </ul>
+                    </section>
 
-                <section data-background="img/schemacrawler_travis.png">
-                  <!-- <img src="img/schemacrawler_travis.png" alt="Continuous integration - Travis"/> -->
-                    <!-- https://travis-ci.com/DSI-Ville-Noumea/contrats-particuliers-liquibase/builds/22322931 -->
+                    <section data-background="black">
+                        <h2>Lints & Slack</h2>
+                        <img src="img/slack.png" alt="Slack notifications"/>
+                    </section>
                 </section>
+                <section>
+                    <section>
+                        <h2>Schemacrawler lints</h2>
+                        <h3>Workflow</h3>
+                        <ul>
+                            <li>Special cases are debated with the team, and exceptions are added if required</li>
+                        </ul>
+                    </section>
 
-
-                <section data-background="black">
-                    <h2>Lints & Slack</h2>
-                    <img src="img/slack.png" alt="Slack notifications"/>
-                </section>
-
-                <section data-background="black">
-                    <h2>Schemacrawler lints</h2>
-                    <h3>Define exceptions</h3>
-                    <img src="img/lints_exceptions.png" alt="lint exceptions"/>
+                    <section data-background="black">
+                        <h2>Schemacrawler lints</h2>
+                        <h3>Define exceptions</h3>
+                        <img src="img/lints_exceptions.png" alt="lint exceptions"/>
+                    </section>
                 </section>
 
                 <section data-background="black">
@@ -674,21 +692,25 @@ notifications:
                     </ul>
                 </section>
 
-                <section>
-                    <h2>Schemacrawler additionnal lints</h2>
-                    <h3>Side effects</h3>
-                    <ul>
-                      <li>Discover Open Source spirit and contribution</li>
-                      <li>Test many new tools that are now totally integrated to our projects</li>
+                <!--<section>
+                    <section>
+                        <h2>Schemacrawler additional lints</h2>
+                        <h3>Side effects</h3>
                         <ul>
-                          <li>Travis - Continuous integration</li>
-                          <li>Coveralls - Test coverage</li>
-                          <li>VersionEye - Dependencies update</li>
-                          <li>SonarQ - Check source code quality</li>
-                          <li>Slack notifications</li>
+                          <li>Discover Open Source spirit and contribution</li>
+                          <li>Test many new tools that are now totally integrated to our projects</li>
+                            <ul>
+                              <li>Travis - Continuous integration</li>
+                              <li>Coveralls - Test coverage</li>
+                              <li>VersionEye - Dependencies update</li>
+                              <li>SonarQ - Check source code quality</li>
+                              <li>Slack notifications</li>
+                            </ul>
+                           <li>2 free <a href="https://www.jetbrains.com/idea/">IntelliJ IDE</a> licences (1 licence cost : 200$)</li>
                         </ul>
-                    </ul>
-                </section>
+                    </section>
+
+                </section> -->
 
                 <section>
                     <h2>ROI on time invested in open source dev.</h2>
@@ -704,7 +726,41 @@ notifications:
                 </section>
 
                 <section>
+                    <section>
+                        <h2>Developer feedback</h2>
+                        <ul>
+                            <li>Discover Open Source spirit and contribution</li>
+                            <li>Free access to many paying tools that are now totally integrated to our projects</li>
+                            <ul>
+                                <li>Travis - Continuous integration</li>
+                                <li>Coveralls - Test coverage</li>
+                                <li>VersionEye - Dependencies update</li>
+                                <li>SonarQ - Check source code quality</li>
+                                <li>Slack notifications</li>
+                            </ul>
+                        </ul>
+                    </section>
+                    <section data-background="black">
+                        <h2>Coveralls</h2>
+                        <img src="img/coveralls_repos.png" alt="Coveralls"/>
+                    </section>
+                    <section data-background="black">
+                        <h2>VersionEye</h2>
+                        <img src="img/versioneye.png" alt="VersionEye"/>
+                    </section>
+                    <section data-background="black">
+                        <h2>Slack notifications</h2>
+                        <img src="img/slack.png" alt="Slack notifications"/>
+                    </section>
+                </section>
+                <section>
                     <h2>Developer feedback</h2>
+                    <ul>
+                        <li>2 free <a href="https://www.jetbrains.com/idea/">IntelliJ IDE</a> licences (1 licence cost : 200$)</li>
+                        <li>Win of time, boring checks are now done automatically</li>
+                        <li>Deliver better quality applications</li>
+                        <li>Trusted production deployments</li>
+                    </ul>
                 </section>
 
                 <section>
