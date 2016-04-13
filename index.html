@@ -2,6 +2,7 @@
     <head>
         <title>Database without dba</title>
         <link rel="stylesheet" href="css/reveal.css">
+        <link rel="stylesheet" href="css/custom.css">
 
         <link rel="stylesheet" href="css/theme/moon.css" id="theme">
 
@@ -28,7 +29,7 @@
                 "Sincerity is the mother of knowledge."
                 -->
 
-                <section data-background="img/shinto-circle_op40.jpg">
+                <section data-background="img/shinto-circle.jpg" class="blackveil">
                     <blockquote style="color:white">"Even the wishes of an ant reach to heaven."</blockquote>
                 </section>
 
@@ -137,7 +138,7 @@
                     </ul>
                 </section>
 
-                <section data-background="img/shinto-treescape_op40.jpg">
+                <section data-background="img/shinto-treescape.jpg" class="blackveil">
                     <h2>shintoism</h2>
                     <blockquote style="color:white">"The followers of Shintoism believe that spiritual powers exist in the
                         natural world. They believe that "spirits" called kami live in natural places
@@ -510,6 +511,16 @@ liquibase update
                 </section>
 
                 <section>
+                    <h2>Why using Schemacrawler lints ?</h2>
+                    <ul>
+                        <li>database quality and consistency control</li>
+                        <li>ability define our own requirements by creating our own lints</li>
+                        <li>reports</li>
+                        <li>final goal : automate controls</li>
+                     </ul>
+                </section>
+
+                <section>
                     <h2>Schemacrawler native lints</h2>
                     <ul>
                       <li>Evaluating the quality and consistency of a database schema</li>
@@ -551,7 +562,7 @@ liquibase update
                       <li>Bug reports</li>
                       <li>Pull requests</li>
                       <li>Tests</li>
-                      <li>New asked feature : continuous integration (CI)</li>
+                      <li>On demand feature : continuous integration (CI)</li>
                     </ul>
                 </section>
 
@@ -781,8 +792,8 @@ notifications:
                     </ul>
                 </section>
 
-                <section data-background="img/shinto-paint.JPG">
-                    <blockquote>"Sincerity is the mother of knowledge."</blockquote>
+                <section data-background="img/shinto-paint.JPG" class="blackveil">
+                    <blockquote style="color:white">"Sincerity is the mother of knowledge."</blockquote>
                 </section>
 
 
