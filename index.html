@@ -612,7 +612,7 @@ liquibase update
                     <section data-background="black">
                         <h2>Travis</h2>
                         <h3>Set env</h3>
-                    <pre><code class="hljs">
+                    <pre><code style="font-size: large">
 sudo: required
 language: java
 cache:
@@ -629,7 +629,7 @@ addons:
                     <section data-background="black">
                         <h2>Travis</h2>
                         <h3>Runtime install</h3>
-                        <pre><code class="hljs">
+                        <pre><code style="font-size: large">
 before_install:
 - env
 - export postgresql_version=9.3-1104-jdbc41
@@ -642,16 +642,14 @@ before_install:
 - sudo cp  postgresql-${postgresql_version}.jar /usr/lib/liquibase-${liquibase_version}/lib/
 - wget https://github.com/adriens/schemacrawler-deb/releases/download/${schemacrawler_version}/schemacrawler-deb_${schemacrawler_version}_all.deb
 - sudo dpkg -i schemacrawler-deb_${schemacrawler_version}_all.deb
-- wget https://github.com/mbarre/schemacrawler-additionnallints/releases/download/${schemacrawler_lint_version}/schemacrawler-additionnallints-${schemacrawler_lint_version}.jar
-- sudo cp schemacrawler-additionnallints-${schemacrawler_lint_version}.jar /opt/schemacrawler-${schemacrawler_version}/lib
-- sudo chmod +rx /opt/schemacrawler-${schemacrawler_version}/lib/schemacrawler-additionnallints-${schemacrawler_lint_version}.jar
-</code></pre>
+- sudo mv /opt/schemacrawler-${schemacrawler_version}/additional-lints/schemacrawler-additionnallints-*.jar /opt/schemacrawler-${schemacrawler_version}/lib
+                        </code></pre>
                     </section>
 
                     <section data-background="black">
                         <h2>Travis</h2>
                         <h3>Lint !</h3>
-                        <pre><code class="hljs">
+                        <pre><code style="font-size: large">
 - dropdb --if-exists contratspart
 - psql -c 'create database contratspart;' -U postgres
 - cd cp
