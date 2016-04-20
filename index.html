@@ -442,7 +442,7 @@ liquibase update
                     <h2>Liquibase Code donations</h2>
                     <ul>
                         <li>deb and rpm installers, merged in base source code, now part of official release</li>
-                        <li>Puppet module (published on the puppet forge)</li>
+                        <li>Puppet module (published on the <a href="https://forge.puppet.com/dsivillenoumea/liquibase">puppet forge</a>) (> 540 downloads within less than 2 weeks)</li>
                         <li>Some bug fixes (with related unit tests)</li>
                     </ul>
                 </section>
@@ -528,10 +528,10 @@ liquibase update
                 <section>
                     <h2>Why using Schemacrawler lints ?</h2>
                     <ul>
-                        <li>database quality and consistency control</li>
-                        <li>ability define our own requirements by creating our own lints</li>
-                        <li>reports</li>
-                        <li>final goal : automate controls</li>
+                        <li>Database quality and consistency control</li>
+                        <li>Ability to define our own requirements by creating our own lints</li>
+                        <li>Reports</li>
+                        <li>Final goal : automate controls as part of continuous build.</li>
                      </ul>
                 </section>
 
@@ -541,18 +541,18 @@ liquibase update
                       <li>Evaluating the quality and consistency of a database schema</li>
                         <ul>
                           <li>check table without PK</li>
-                          <li>check that FK has the same type as its referenced PK</li>
+                          <li>check that FK has the same jdbc type as its referenced PK</li>
                           <li>check table with all nullable column</li>
                           <li>check empty table</li>
                           <li><a href="http://sualeh.github.io/SchemaCrawler/lint.html">and many others...</a></li>
                         </ul>
-                      <li>Helpfull but do not fit all our needs</li>
+                      <li>Helpfull but do not fit all our needs.</li>
                     </ul>
                 </section>
 
                 <section data-background="black">
                   <!-- Why not  -->
-                  <blockquote>Contribute to the Schemacrawler project, and propose our own lints based on personnal experience and best practices</blockquote>
+                  <blockquote>Contribute to the Schemacrawler project, and propose our own lints based on personnal experience and best practices.</blockquote>
                 </section>
 
                 <section>
@@ -560,7 +560,7 @@ liquibase update
                     <ul>
                       <li>check content vs column data type</li>
                       <li>check on not normalized content</li>
-                      <li>check column size</li>
+                      <li>check column size : defined vs used</li>
                       <li>check table/column remarks</li>
                       <li>check PK data type</li>
                       <li>check table/column case</li>
@@ -577,7 +577,7 @@ liquibase update
                       <li>Bug reports</li>
                       <li>Pull requests</li>
                       <li>Tests</li>
-                      <li>On demand feature : continuous integration (CI)</li>
+                      <li>New feature request : make lint part of continuous build</li>
                     </ul>
                 </section>
 
@@ -604,8 +604,8 @@ liquibase update
                         <h2>Schemacrawler lints</h2>
                         <h3>Workflow</h3>
                         <ul>
-                          <li>Need : automatic checking</li>
-                          <li>Liquibase scripts are run and database is checked at each commit on github</li>
+                          <li>Requirement : automatic lint checking on each database change</li>
+                          <li>Liquibase scripts are run and resulting database design quality is checked at each commit on github</li>
                           <li>Commit is rejected if the updates don't fit our quality requirements : one PK per table, no blob...</li>
                         </ul>
                     </section>
