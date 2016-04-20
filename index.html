@@ -323,9 +323,9 @@
                     <h3>Puppetized Liquibase install</h3>
                     <pre><code>
 class profiles::liquibase {
-  $version      = hiera('liquibase::version')
-  class { 'liquibase':
-  version      => $version,
+  $version = hiera('liquibase::version')
+  class {'liquibase':
+  version => $version,
   }
 }
                     </code></pre>
