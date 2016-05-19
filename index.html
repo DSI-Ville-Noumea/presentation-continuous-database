@@ -29,7 +29,7 @@
                 "Sincerity is the mother of knowledge."
                 -->
 
-                <section data-background="img/shinto-circle.jpg" class="blackveil">
+                <section data-background="img/shinto-circle_op40.jpg">
                     <blockquote style="color:white">"Even the wishes of an ant reach to heaven."</blockquote>
                 </section>
 
@@ -139,7 +139,7 @@
                     </ul>
                 </section>
 
-                <section data-background="img/shinto-treescape.jpg" class="blackveil">
+                <section data-background="img/shinto-treescape_op40.jpg">
                     <h2>shintoism</h2>
                     <blockquote style="color:white">"The followers of Shintoism believe that spiritual powers exist in the
                         natural world. They believe that "spirits" called kami live in natural places
@@ -530,7 +530,7 @@ liquibase update
                 <section>
                     <h2>Why using Schemacrawler lints ?</h2>
                     <ul>
-                        <li>Database quality and consistency control</li>
+                        <li>Database quality and design control</li>
                         <li>Ability to define our own requirements by creating our own lints</li>
                         <li>Reports</li>
                         <li>Final goal : automate controls as part of continuous build.</li>
@@ -540,7 +540,7 @@ liquibase update
                 <section>
                     <h2>Schemacrawler native lints</h2>
                     <ul>
-                      <li>Evaluating the quality and consistency of a database schema</li>
+                      <li>Evaluating the quality and design of a database schema</li>
                         <ul>
                           <li>check table without PK</li>
                           <li>check that FK has the same jdbc type as its referenced PK</li>
@@ -666,18 +666,15 @@ notifications:
   slack: dsi-mairie-noumea:********************
 </code></pre>
                     </section>
-
-                    <section data-background="img/schemacrawler_travis.png">
-                        <!-- <img src="img/schemacrawler_travis.png" alt="Continuous integration - Travis"/> -->
-                        <!-- https://travis-ci.com/DSI-Ville-Noumea/contrats-particuliers-liquibase/builds/22322931 -->
-                    </section>
+                    <section data-background="img/schemacrawler_travis.png"></section>
+                    <section data-background="img/schemacrawler_travis_fail.png"></section>
                 </section>
                 <section>
                     <section>
                         <h2>Schemacrawler lints</h2>
                         <h3>Workflow</h3>
                         <ul>
-                            <li>All developer are notified thanks a travis/slack integration</li>
+                            <li>All developers are notified thanks to travis/slack integration</li>
                         </ul>
                     </section>
 
@@ -709,13 +706,22 @@ notifications:
                 </section>
 
                 <section>
-                    <h2>Schemacrawler lints</h2>
-                    <h3>Next steps</h3>
-                    <ul>
-                      <li>Online reports</li>
-                      <li>Develop templates for nice lint dashboards, charts, ... and quality scores</li>
-                      <li>Specific badge that shows up the database quality level (see code climate)</li> <!--ajouter screenshot -->
-                    </ul>
+                    <section>
+                        <h2>Schemacrawler lints</h2>
+                        <h3>Next steps</h3>
+                        <ul>
+                            <li>Online reports</li>
+                            <li>Develop templates (Thymeleaf) for nice lint dashboards, charts, ... and quality scores</li>
+                            <li>Specific badge that shows up the database quality level like <img src="img/code_climate_badges.png" alt="Code climate badges"/></li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>schemacrawler-dblint-report</h2>
+                        <ul>
+                            <li><img src="img/star-rating.png" alt="Dashboard start rating element"/></li>
+                            <li><img src="img/pie.png" alt="Dashboard pie element"/></li>
+                        </ul>
+                    </section>
                 </section>
 
                 <section>
@@ -775,6 +781,21 @@ notifications:
                 </section>
 
                 <section>
+                    <h2>Links and resources</h2>
+                    <ul>
+                        <li><a href="http://sualeh.github.io/SchemaCrawler/">Schemacrawler</a></li>
+                        <li><a href="https://github.com/adriens/schemacrawler-deb">Schemacrawler Debian package builder</a></li>
+                        <li><a href="http://mbarre.github.io/schemacrawler-additionnallints/">Schemacrawler additional lints</a></li>
+                        <li><a href="https://github.com/mbarre/schemacrawler-dblint-report">Schemacrawler DBLint report</a></li>
+                        <li><a href="https://travis-ci.org/">Travis</a></li>
+                        <li><a href="https://coveralls.io/">Coveralls</a></li>
+                        <li><a href="https://www.versioneye.com/">VersionEye</a></li>
+                        <li><a href="https://slack.com/">Slack</a></li>
+                        <li><a href="http://www.thymeleaf.org/">Thymeleaf</a>, <a href="https://d3js.org/">d3js</a></li>
+                    </ul>
+                </section>
+
+                <section>
                     <h2>Tools used to produce this slideshow</h2>
                     <ul>
                         <li>Reveal.js</li>
@@ -785,7 +806,7 @@ notifications:
                     </ul>
                 </section>
 
-                <section data-background="img/shinto-paint.JPG" class="blackveil">
+                <section data-background="img/shinto-paint_op40.JPG">
                     <blockquote style="color:white">"Sincerity is the mother of knowledge."</blockquote>
                 </section>
 
